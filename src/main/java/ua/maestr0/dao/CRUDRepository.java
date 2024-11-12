@@ -4,14 +4,16 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.resource.transaction.spi.TransactionStatus;
+
 import java.lang.reflect.ParameterizedType;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ua.maestr0.util.database.HibernateUtil;
 
 public abstract class CRUDRepository<T, K> {
     public static final Logger logger = LoggerFactory.getLogger(CRUDRepository.class);
-    private final SessionFactory sessionFactory;
+    final SessionFactory sessionFactory;
     private final Class<T> entityClass;
 
 

@@ -40,7 +40,7 @@ public class Ticket {
     private Client client;
 
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne
     @JoinColumn(
             name = "from_planet_id",
             nullable = false
@@ -48,7 +48,7 @@ public class Ticket {
     private Planet fromPlanet;
 
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne
     @JoinColumn(
             name = "to_planet_id",
             nullable = false
